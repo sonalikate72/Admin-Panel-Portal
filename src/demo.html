@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   const user = {
+      //     name: "Sonali",
+      //     lastname: "kate",
+      //     age: 25,
+      //     address: function () {
+      //       console.log(this);
+      //       demo = () => {
+      //         console.log(this);
+      //       };
+      //       demo();
+      //     },
+      //   };
+      //   // console.log(user);
+      //   user.address();
+      //   // user.demo();
+
+      /**********Clouseure*********/
+      function Outer() {
+        var outer = "Outer Function";
+        let count = 0;
+
+        function Inner() {
+          count++;
+          var inner = outer;
+          var inner1 = "Inner Function";
+
+          console.log(count);
+          console.log(`${inner1} and ${inner}`);
+        }
+        return Inner();
+      }
+
+      Outer();
+    </script>
+  </body>
+</html>
