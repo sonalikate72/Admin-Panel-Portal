@@ -24,22 +24,42 @@
       //   // user.demo();
 
       /**********Clouseure*********/
-      function Outer() {
-        var outer = "Outer Function";
-        let count = 0;
+      //   function Outer() {
+      //     var outer = "Outer Function";
+      //     let count = 0;
 
-        function Inner() {
-          count++;
-          var inner = outer;
-          var inner1 = "Inner Function";
+      //     function Inner() {
+      //       count++;
+      //       var inner = outer;
+      //       var inner1 = "Inner Function";
 
-          console.log(count);
-          console.log(`${inner1} and ${inner}`);
+      //       console.log(count);
+      //       console.log(`${inner1} and ${inner}`);
+      //     }
+      //     return Inner();
+      //   }
+
+      //   Outer();
+
+      /***************String Methods***************/
+
+      let string = "Good Afternoon Everyone";
+       console.log(string.length);
+       console.log(string.indexOf("d"));
+       console.log(string.lastIndexOf("e"));
+       console.log(string.includes("Good"));
+       console.log(string.charAt(6));
+
+
+       function fun(string,str){
+        if(string.indexOf(str) === -1){
+            console.log("not Includes");
         }
-        return Inner();
-      }
-
-      Outer();
+        else{
+            console.log(" include");
+        }
+       }
+       fun(string,"hhjhj")
     </script>
   </body>
 </html>
